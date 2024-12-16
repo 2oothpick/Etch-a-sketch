@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(175, 174, 174);
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 160px;
+    height: 160px;
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 10px;
+    height: 10px;
+    /* border: 1px solid green; */
+    flex: auto
+}
+
+.hover {
+    background-color: rgb(233, 0, 0);
+}
+
