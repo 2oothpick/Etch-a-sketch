@@ -6,7 +6,7 @@ function createGrid(size = grid) {
   for (let i = 1; i <= size * size; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
-    square.setAttribute('style', `min-width: ${300 / size}px`);
+    square.setAttribute('style', `min-width: ${660 / size}px`);
     container.append(square);
     square.addEventListener('mouseover', () => {
       r = Math.floor(Math.random() * 256);
