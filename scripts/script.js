@@ -1,10 +1,12 @@
 const container = document.querySelector('.container');
 
-function createGrid(size = 5) {
+let grid = 16;
+
+function createGrid(size = grid) {
   for (let i = 1; i <= size * size; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
-    square.setAttribute('style', `min-width: ${160 / size}px`);
+    square.setAttribute('style', `min-width: ${300 / size}px`);
     container.append(square);
     square.addEventListener('mouseover', () => {
       r = Math.floor(Math.random() * 256);
@@ -16,8 +18,9 @@ function createGrid(size = 5) {
 }
 
 createGrid();
+
 function prompt_grid() {
-  let grid = prompt('Size of grid\nLimit: 100');
+  grid = prompt('Size of grid\nLimit: 100');
   try {
     grid = Number(grid);
     if (grid > 0 && grid <= 100) {
@@ -35,9 +38,15 @@ function prompt_grid() {
   }
 }
 
-const button = document.querySelector('button');
+const button = document.querySelector('button.change_size');
 button.addEventListener('click', () => {
   prompt_grid();
 });
 
-console.log(Math.floor(Math.random() * 256));
+const clear = document.querySelector('button.clear');
+clear.addEventListener('click', () => {
+  document.querySelectorAll('div.square').forEach((value) => {
+    value.remove();
+  });
+  createGrid(grid);
+});
