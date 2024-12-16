@@ -1,7 +1,8 @@
 body {
-    background-color: rgb(175, 174, 174);
+    background-color: rgb(168, 168, 168);
     height:100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -12,16 +13,14 @@ body {
     border: 1px solid white;
     display: flex;
     flex-wrap: wrap;
+    /* align-content: stretch; */
 }
 
 .square {
-    width: 10px;
-    height: 10px;
-    /* border: 1px solid green; */
     flex: auto
 }
 
-.hover {
-    background-color: rgb(233, 0, 0);
+button {
+    margin-bottom: 10px;
+    border-radius: 6px;
 }
-
